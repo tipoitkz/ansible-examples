@@ -1,0 +1,13 @@
+- name: Start metricbeat
+  debug:
+    msg: Start metricbeat
+  tags:
+    #тут наш тэг для запуска
+    - start metricbeat
+
+- name: Start service2
+  debug:
+    msg: Start service2
+  tags:
+    #тут наш тэг для запуска
+    - start service2    

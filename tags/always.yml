@@ -1,0 +1,16 @@
+- hosts: localhost
+
+  tasks:
+
+    - name: Stop metricbeat
+      debug:
+        msg: Stop metricbeat
+      tags: [stop metricbeat,always]
+        #тут наш тэг для остановки
+
+    - name: Start metricbeat
+      debug:
+        msg: Start metricbeat
+      tags:
+        #тут наш тэг для запуска
+        - start metricbeat

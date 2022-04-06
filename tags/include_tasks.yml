@@ -1,0 +1,19 @@
+- hosts: localhost
+
+  tasks:
+
+    - include_tasks:
+        file: roles/start_metricbeat/tasks/main.yml
+        apply:
+          tags: start metricbeat
+      tags:
+        #тут наш тэг для остановки
+        - start metricbeat
+
+    - include_tasks:
+        file: roles/stop_metricbeat/tasks/main.yml
+        apply:
+          tags: stop metricbeat
+      tags:
+        #тут наш тэг для запуска
+        - stop metricbeat

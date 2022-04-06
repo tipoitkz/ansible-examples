@@ -1,0 +1,13 @@
+- hosts: localhost
+
+  roles:
+
+    - role: stop_metricbeat
+      tags:
+        #тут наш тэг для остановки
+        - stop metricbeat
+
+    - role: start_metricbeat
+      tags:
+        #тут наш тэг для запуска
+        - start metricbeat

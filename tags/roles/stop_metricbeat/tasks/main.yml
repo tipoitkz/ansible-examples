@@ -1,0 +1,13 @@
+- name: Stop metricbeat
+  debug:
+    msg: Stop metricbeat
+  tags:
+    #тут наш тэг для остановки
+    - stop metricbeat
+
+- name: Stop service2
+  debug:
+    msg: Stop service2
+  tags:
+    #тут наш тэг для остановки
+    - stop service2    

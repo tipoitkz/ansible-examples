@@ -1,0 +1,15 @@
+- hosts: localhost
+
+  tasks:
+
+    - include_role:
+        name: start_metricbeat
+      tags:
+        #тут наш тэг для остановки
+        - start metricbeat
+
+    - include_role:
+        name: stop_metricbeat
+      tags:
+        #тут наш тэг для запуска
+        - stop metricbeat
